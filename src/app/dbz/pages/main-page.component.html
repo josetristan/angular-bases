@@ -1,0 +1,14 @@
+<h1>DBZ Personajes</h1>
+<hr>
+
+<div class="row">
+  <div class="col">
+      <dbz-list [characterList]="characters"
+      (onDeleteCharacterEvent)="onDeleteCharacter($event)"></dbz-list>
+  </div>
+  <div class="col">
+    <!-- $event: tiene que ser así por angular-->
+    <!-- cuando el componente dbz-add-character emita un nuevo componente (evento) se llama a onNewcharacter del main.page.component -->
+    <dbz-add-character (onNewCharacter)="onNewCharacter($event)"></dbz-add-character>
+  </div>
+</div>
